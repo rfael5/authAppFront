@@ -1,0 +1,74 @@
+.container {
+    display: flex; 
+    align-items:center; 
+    justify-content: center; 
+    margin-top:60px
+}
+
+.form-container {
+    width:300px; 
+    height: 300px; 
+    border: 1px solid white; 
+    border-radius:5px;
+}
+
+.input-container {
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    padding-top:70px;
+    margin-bottom:10px;
+}
+
+.campo {
+    display:flex; 
+    flex-direction:column;
+}
+
+.campo input {
+    height: 25px;
+    width: 230px;
+    margin-top: 5px;
+}
+
+.campo-email {
+    margin-bottom: 15px;
+}
+
+.campo-senha {
+    margin-bottom: 30px;
+}
+
+.botao-entrar {
+    width: 170px; 
+    height: 40px;
+    background:white;
+    border:none;
+    border-radius: 2.5px;
+    font-size:15px;
+}
+
+.botao-entrar:hover {
+    cursor: pointer;
+    background: black;
+    color:white;
+    border: 0.9px solid white;
+    border-radius: 4px;
+}
+
+.title-container {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.typed-text {
+    font-size:54px;
+    font-weight:800;
+}
+
+.cadeado {
+    font-size: 54px;
+}

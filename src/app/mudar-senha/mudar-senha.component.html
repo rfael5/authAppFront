@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Mudar senha</h2>
+
+    <form [formGroup]="formMudarSenha" (submit)="validarFormulario()">
+        <div class="input-container">
+            <label>Nova senha</label>
+            <input type="password" formControlName="novaSenha">
+        </div>
+        
+        <div *ngIf="formMudarSenha.controls['novaSenha'].dirty && formMudarSenha.controls['novaSenha'].invalid">
+            <small style="color:red">
+                Senha invalida. A senha deve ter no mínimo 6 caracteres.
+            </small>
+        </div>
+        
+        <div class="input-container">
+            <label>Confirmar senha</label>
+            <input type="password" formControlName="confirmarNovaSenha">
+        </div>
+
+        <button class="btn-mudar-senha" type="submit">Mudar senha</button>
+    </form>
+
+    <div *ngIf="erroConfirmacao">
+        <small style="color:red">
+            Erro na confirmação de senha. As duas senhas devem ser iguais.
+        </small>
+    </div>
+
+    <div *ngIf="erroFormulario">
+        <small style="color:red">
+            Erro ao tentar mudar senha. A senha deve ter no mínimo 6 dígitos e não pode ter espaços em branco.
+        </small>
+    </div>
+</div>
+
+
+
+

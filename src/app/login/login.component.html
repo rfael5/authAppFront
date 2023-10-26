@@ -1,0 +1,37 @@
+<div class="title-container">
+    <i class="cadeado fas fa-lock"></i>
+    <span class="typed-text">{{typingText}}</span>
+</div>
+
+<div class="container">
+
+
+    <div class="form-container">
+    
+        <form [formGroup]="formLogin">
+            <div class="input-container">
+                <div class="campo campo-email">
+                    <label>E-mail:</label>
+                    <input type="text" formControlName="email" />
+                </div>
+                
+                <div class="campo campo-senha">
+                    <label>Senha:</label>
+                    <input type="password" formControlName="password" />
+                </div>
+
+                <div>
+                    <button (click)="login()" class="botao-entrar">Entrar</button>
+                </div>
+
+            </div>
+            
+            <div style="width:100%; display:flex; justify-content:center;" *ngIf="erroLogin">
+                <small style="color:red;">{{msgErro}}</small>
+            </div> 
+        </form>
+    </div>
+
+    
+
+</div>

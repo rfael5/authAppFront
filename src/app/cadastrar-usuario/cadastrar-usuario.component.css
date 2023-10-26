@@ -1,0 +1,47 @@
+.container {
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 150px;
+}
+
+.input-list {
+    display:flex;
+    flex-direction: column;
+}
+
+.input-box {
+    display:flex;
+    flex-direction: column;
+}
+
+.input-container label {
+    margin-bottom: 15px;
+}
+
+.input-box input,
+.input-box select {
+    width: 400px;
+    height: 35px;
+    background: black;
+    border-radius:8px;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.btn-cadastro {
+    width: 170px; 
+    height: 40px;
+    background:white;
+    border:none;
+    border-radius: 2.5px;
+    font-size:15px;
+}
+
+.btn-cadastro:hover {
+    cursor: pointer;
+    background: black;
+    color:white;
+    border: 0.9px solid white;
+    border-radius: 4px;
+}

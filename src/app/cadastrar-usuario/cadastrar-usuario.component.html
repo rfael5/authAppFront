@@ -1,0 +1,51 @@
+<div class="container">
+    <h2>Cadastrar usuário</h2>
+    <form [formGroup]="formCadastro" (submit)="validarFormulario()">
+        <div class="input-list">
+
+            <div class="input-box">
+                <label>Nome</label>
+                <input formControlName="nome" />
+            </div>
+
+            <div class="input-box">
+                <label>E-mail</label>
+                <input formControlName="email" />
+            </div>
+
+            <div class="input-box">
+                <label>Tipo de usuário</label>
+                <select formControlName="tipoUsuario">
+                    <option value="user">Usuário comum</option>
+                    <option value="admin">Administrativo</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>Senha</label>
+                <input type="password" formControlName="senha" />
+            </div>
+
+            <div class="input-box">
+                <label>Confirmar senha</label>
+                <input type="password" formControlName="confirmarSenha" />
+            </div>
+
+            <button class="btn-cadastro" type="submit">Cadastrar</button>
+        </div>
+        
+        
+    </form>
+
+    <div *ngIf="erroFormulario">
+        <small style="color:red;">Erro ao tentar cadastrar. Verifique se os dados estão preenchidos corretamente.</small>
+    </div>
+
+    <div *ngIf="formCadastro.controls['senha'].invalid && formCadastro.controls['senha'].dirty">
+        <small style="color:red;">Senha invalida. A senha deve ter no mínimo 6 dígitos e não pode ter espaço em branco</small>
+    </div>
+
+    <div *ngIf="erroConfirmacaoSenha">
+        <small style="color:red;">Erro na confirmação de senha. Certifique-se de que a senha está igual nos dois campos.</small>
+    </div>
+</div>
